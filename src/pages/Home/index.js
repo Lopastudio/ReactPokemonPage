@@ -39,7 +39,6 @@ function PokeList() {
         <input type="text" placeholder="Search Pokemon..." value={searchQuery} onChange={handleSearch} />
       </form>
       <ul>
-        <h4>Pokemon List</h4>
         {filteredPokemon.map(p => (
           <li key={p.name}>
             <Button variant="btn btn-dark" onClick={() => handleClick(p.url)}>{' '}
@@ -49,15 +48,22 @@ function PokeList() {
         ))}
       </ul>
       {selectedPokemon && (
-        <Toast onClose={() => setPokemon("pikachu")} style={{position: "fixed", top: "50%", right: "10%", transform: "translateY(-50%)"}}> 
+        <Toast onClose={() => setPokemon("pikachu")} style={{position: "fixed", top: "50%", right: "10%", transform: "translateY(-50%)", textAlign: 'right'}}> 
         <Toast.Header>
           <img src={selectedPokemon.sprites.front_default} alt={selectedPokemon.name} />
           <strong className="mr-auto">{selectedPokemon.name}</strong>
         </Toast.Header>
-        <Toast.Body style={{ textAlign: 'right' }}>
+        <Toast.Body>
           <h5>Weight: {selectedPokemon.weight}</h5>
           <h5>Height: {selectedPokemon.height}</h5>
+          <h5>Abilities: {selectedPokemon.abilities.map(a => a.ability.name).join(', ')}</h5>
           <h5>Base Experience: {selectedPokemon.base_experience}</h5>
+          {selectedPokemon.stats.map((s) => (
+    <h5 key={s.stat.name}>
+        {s.stat.name.charAt(0).toUpperCase() + s.stat.name.slice(1)}: {s.base_stat}
+    </h5>
+))}
+
         </Toast.Body>
       </Toast>
       
