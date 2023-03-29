@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+    color: #F9A70E;
+    font-weight: bold;
+}
+h4 {
+    text-align: center;
+    color: #866121;
+    font-weight: bold;
+}
+h5 {
+    color: #866121;
+}
+h6 {
+    color: #866121;
+    text-align: center;
+}
+strong {
+    color: #F9A70E;
+    font-weight: bold;
+    font-size: larger;
+}
+.body{
+    background-color: #000000;
+}
+body{
+    background-color: #000000;
+}
+input{
+    text-align: center;
+    background-color: #866121;
+    color: #ffffff;
+    width: 80%;
+    max-width: 400px;
+}
