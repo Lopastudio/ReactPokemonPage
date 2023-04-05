@@ -1,0 +1,16 @@
+.menu {
+    text-align: center;
+    line-height: 1.5;
+}
+.pikachu {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spin 5s infinite linear;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

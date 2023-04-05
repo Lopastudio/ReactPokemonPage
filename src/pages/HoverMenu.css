@@ -1,0 +1,8 @@
+.hide {
+    display: none;
+  }
+      
+.button:hover + .hide {
+    display: block;
+    color: red;
+  }
