@@ -7,8 +7,14 @@ const Layout = () => {
       <nav>
       <h1 style={{ textAlign: 'center' }}>Pokemon Database</h1>
       
-        <ul style={{ textAlign: 'center' }}>
+        <ul style={{ textAlign: 'center', color: "yellow" }}>
             <Link to="/">Home</Link>
+            <Link> - </Link>
+            <Link to="/about">About</Link>
+            <Link> - </Link>
+            <Link to="/profile">Profile</Link>
+            <Link> - </Link>
+            <Link to="/game">Game</Link>
         </ul>
         
       </nav>
